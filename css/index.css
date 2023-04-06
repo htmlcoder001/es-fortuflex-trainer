@@ -322,10 +322,10 @@ body {
 }
 
 .page-wrap {
-    padding: 0px 64px;
-    max-width: 1280px;
+    /*padding: 0px 64px;*/
+    /*max-width: 1280px;*/
     min-width: 300px;
-    margin: 0px auto;
+    /*margin: 0px auto;*/
     position: relative;
     cursor: auto;
 }
@@ -349,6 +349,8 @@ body {
         repeat scroll 0% 0%;
     z-index: 11;
     position: relative;
+    max-width: 1280px;
+    margin: 0px auto;
 }
 
 .main-content::after {
@@ -361,8 +363,8 @@ body {
 
 .content {
     min-height: 700px;
-    border-left: 1px solid rgb(204, 204, 204);
-    border-right: 1px solid rgb(204, 204, 204);
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
     margin: 0px auto;
 }
 
@@ -1492,6 +1494,7 @@ body {
 .article__date {
     font: 14px/18px "ArimoRegular", sans-serif;
     color: rgb(85, 85, 85);
+    margin-bottom: 16px;
 }
 
 .article__date .article__time {

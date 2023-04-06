@@ -108,32 +108,285 @@
             font-size: 20px;
         }
     </style>
+    <style>
+        .page-header {
+        
+        }
+        .header-content {
+        
+        }
+        .header-content__top {
+            padding: 2px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            overflow-x: hidden;
+            position: relative;
+            white-space: nowrap;
+        }
+        .header-content__top:after {
+            content: "";
+            width: 3.125rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-image: linear-gradient(90deg,transparent,#fff);
+        }
+        .header-top__link {
+            font-size: 10px;
+            color: #cecece;
+            position: relative;
+            white-space: nowrap;
+        }
+        .header-top__link:hover {
+            color: #333333;
+        }
+        .header-top__link:after {
+            content: '|';
+            padding: 0 8px;
+        }
+        .header-top__link:hover:after {
+            color: #cecece;
+        }
+        .header-content__main > .header-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 42px;
+        }
+        .header-content__main svg {
+            width: 150px;
+            max-height: 20px;
+        }
+        .header-main__nav {
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .header-nav__link {
+            font-weight: 400;
+            font-size: 15px;
+            font-family: "Times New Roman", Times, serif;
+            color: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px
+        }
+        .header-nav__link:hover {
+            text-shadow: 0 0 0 rgb(51,51,51);
+            color: #000000;
+        }
+        .header-link__menu {
+            position: relative;
+            width: 14px;
+            height: 1px;
+            background-color: #000000;
+            display: block;
+            margin-left: 12px!important;
+        }
+        .header-link__menu:before,
+        .header-link__menu:after {
+            content: '';
+            width: 14px;
+            height: 1px;
+            background-color: #000000;
+            position: absolute;
+        }
+        .header-link__menu:before {
+            top: -5px;
+        }
+        .header-link__menu:after {
+            bottom: -5px;
+        }
+        .header-main__info {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+        .header-info__link {
+            font-size: 12px;
+            font-family: Arial,Helvetica,sans-serif;
+            color: #000000;
+        }
+        .header-info__link:hover {
+            color: #000000;
+            text-shadow: 0 0 0 rgb(51,51,51);
+        }
+        .--subscribe-link {
+            font-size: 11px;
+            font-family: "Times New Roman", Times, serif;
+            color: #000000;
+            padding: 3px 5px;
+            background-color: #f8f03e;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            border-radius: 5px;
+        }
+        .header-content__bottom {
+            background: #f7f7f7;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            padding: 6px 0;
+            height: 42px;
+        }
+        .header-content__bottom > .header-box {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100%;
+        }
+        .header-bottom__link {
+            font-size: 14px;
+            font-family: "Times New Roman", Times, serif;
+            color: #000000;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            margin-right: 16px;
+        }
+        .header-bottom__link:hover {
+            color: #000000;
+        }
+        .--main-link {
+            font-weight: 600;
+            border-right: 1px solid #17435e;
+            padding-left: 12px;
+            padding-right: 16px;
+            margin-right: 32px;
+        }
+        .--active-link {
+            padding: 6px 16px;
+            background-color: #fff;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            border-radius: 5px;
+            text-shadow: 0 0 0 rgb(51,51,51);
+        }
+        .header-box,
+        .header-content__top {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+    
+        @media (max-width: 1100px) {
+            .header-content__top,
+            .header-content__main > .header-box,
+            .header-content__bottom > .header-box {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            .header-main__nav {
+                gap: 8px;
+            }
+            .header-nav__link {
+                width: auto;
+                min-width: 60px;
+            }
+        }
+        @media (max-width: 960px) {
+            .header-main__info {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+            .header-nav__link {
+                display: none;
+            }
+            .header-nav__link.--menu-link {
+                display: flex;
+            }
+        }
+        @media (max-width: 575px) {
+            .header-bottom__link {
+                display: none;
+            }
+            .header-bottom__link.--main-link {
+                display: flex;
+                border:none;
+                margin: 0;
+                padding-left: 0;
+            }
+        }
+    </style>
 
     <div class="page-wrap">
-        <header class="header">
-            <div class="header__inner">
-                <h1 class="header__logo"><a href="#roulette">Россия 24</a></h1>
-                <div class="header__air">
-                    <a href="#roulette" class="header__air-logo">
-                    </a>
-                    <a href="#roulette" class="header__air-title">Прямой эфир</a>
+        <header class="page-header">
+            <div class="header-content">
+                <nav class="header-content__top">
+                    <a href="#to_form" class="header-top__link">ES NOTICIA</a>
+                    <a href="#to_form" class="header-top__link">Guerra Ucrania - Rusia</a>
+                    <a href="#to_form" class="header-top__link">Ayuda 200 euros</a>
+                    <a href="#to_form" class="header-top__link">Shakira</a>
+                    <a href="#to_form" class="header-top__link">Bárbara Rey</a>
+                    <a href="#to_form" class="header-top__link">Tamara Falcó</a>
+                    <a href="#to_form" class="header-top__link">Blanca Paloma</a>
+                    <a href="#to_form" class="header-top__link">El Cordobés</a>
+                    <a href="#to_form" class="header-top__link">Barcelona Manchester</a>
+                    <a href="#to_form" class="header-top__link">Inmigrantes FP</a>
+                    <a href="#to_form" class="header-top__link">Santoral</a>
+                    <a href="#to_form" class="header-top__link">Martina DiRosso</a>
+                    <a href="#to_form" class="header-top__link">Real Madrid - Elche</a>
+                </nav>
+                <div class="header-content__main">
+                    <div class="header-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 761.4 97.5" role="img" aria-hidden="true" class="ue-c-logo--elmundo" fill="var(--ue-c-logo-elmundo-fill, #010101)">
+                            <path d="M77.8,60.9h4.7l-2,24.6c-0.2,2.8-0.4,6.2-0.4,9.3H0v-4.2l6.6-2.2c2.3-0.7,4-2,4-4.7V13.8c0-2.6-1.7-3.8-4-4.7L0,6.9V2.7
+        h78.8c0,3.2,0,6.2,0.2,9.2l1.6,18.8h-4.7l-9.6-17.2c-2.5-4.5-5.4-5.6-11.2-5.6H33.3v35.4h12.9c5.4,0,7.5-2.5,9-5.6l5.8-11.4h4.2
+        v39.2h-4.2L55.1,54c-1.6-3.1-3.6-5.6-9-5.6H33.3v41.3h20.3c6.5,0,10.7-1.7,14.1-8.5L77.8,60.9z"></path>
+                            <path d="M159.9,60.9h4.7l-2,24.6c-0.2,2.7-0.4,6.2-0.4,9.3H89.9v-4.2l5.4-2.2c2-0.7,2.6-2,2.6-4.2V13.3c0-2-0.7-3.3-2.6-4.2
+        l-5.4-2.2V2.7h41.3v4.2l-6.6,2.2c-2.3,0.7-4,1.7-4,4.2v76.2h15.2c6.5,0,10.7-1.7,14.1-8.5L159.9,60.9z"></path>
+                            <path fill="var(--ue-c-logo-elmundo-ball-fill, #00568C)" d="M170.3,45.8c0.4-7.2,2.3-13.9,5.4-19.9h40v19.9H170.3z M215.6,51.7v19.9h-40c-3.1-6-5.1-12.7-5.4-19.9H215.6z M179.4,20
+        c8.3-11.4,21.2-19.4,36.3-20v20H179.4z M215.6,77.5v20c-15-0.7-28-8.5-36.3-20H215.6z M221.6,20V0c15,0.7,28,8.5,36.3,20H221.6z
+            M221.6,45.8V25.9h40c3.1,6,5.1,12.7,5.4,19.9H221.6z M267,51.7c-0.4,7.2-2.3,13.9-5.4,19.9h-40V51.7H267z M257.8,77.5
+        c-8.3,11.4-21.2,19.4-36.3,20v-20H257.8z"></path>
+                            <path d="M386.4,2.7v4.2l-5.6,2c-2.3,0.7-2.9,2.3-2.9,4.4v70.9c0,2,0.7,3.3,2.6,4.2l5.4,2.2v4.2h-38.2v-4.2l5.3-2.2
+        c2-0.7,2.6-2,2.6-4.2V14.3h-0.2l-29.2,80.5h-4.9l-31.7-78.2h-0.2v57.1c0,8.7,0.9,13.4,9.2,15.4l6,1.4v4.2h-33.3v-4.2l4-1.1
+        c6.9-2,7.8-6.9,7.8-15.6V13.9c0-2-0.7-3.8-4.2-5.1l-4.4-1.8V2.7h35.5c0.4,3.6,1.4,7.4,2.5,10l19.2,49.5h0.2l16.7-46.3
+        c1.1-3.3,2.6-9,2.6-13.3L386.4,2.7L386.4,2.7z"></path>
+                            <path d="M451.4,6.9V2.7h28.3v4.2L476.3,8c-4.2,1.3-5.6,3.8-5.6,13v43.3c0,23.9-16.9,32.1-34.6,32.1c-20.3,0-36.1-7.4-36.1-31.5
+        V13.3c0-2-0.7-3.3-2.6-4.2l-5.4-2.2V2.7h38.6v4.2l-5.3,2.2c-2,0.7-2.6,2-2.6,4.2v51.5c0,15.8,7.5,22.5,20.7,22.5
+        c14.5,0,20.9-8.9,20.9-24.3V21c0-9.2-1.3-11.4-6.9-12.7L451.4,6.9z"></path>
+                            <path d="M540.4,6.9V2.7H574v4.2l-4,1.1c-7.5,2.2-7.8,6.6-7.8,15.2v71.5h-10.7l-51.6-78.9h-0.2v57.9c0,8.7,1.1,12.9,9.4,15l5.8,1.4
+        v4.7h-33.7v-4.7l4.2-1.1c6.9-2,7.8-6.6,7.8-15.2V13.6c-0.2-2-1.4-4.2-6.5-5.6l-4-1.1V2.7h36.8c0.7,1.6,2.5,4.4,4,6.7l31.9,49.3
+        V23.4c0-8.7-1.1-13-9.4-15L540.4,6.9z"></path>
+                            <path d="M612.8,2.7c33.8,0,50,20,50,46.1s-16.3,46.1-50,46.1h-35.7v-4.2l5.4-2.2c2-0.7,2.6-2,2.6-4.2V13.3c0-2-0.7-3.3-2.6-4.2
+        l-5.4-2.2V2.7H612.8z M607.8,89.8h6c22.2,0,25.7-18.8,25.7-41s-3.5-41-25.7-41h-6V89.8z"></path>
+                            <path d="M715.8,0.9c22.1,0,45.5,16.1,45.5,47.9c0,31.7-23.4,47.9-45.5,47.9s-45.3-16.1-45.3-47.9S693.8,0.9,715.8,0.9z M715.8,91.4
+        c15.2,0,21.9-14.5,21.9-42.6S731,6.1,715.8,6.1c-15.1,0-21.8,14.5-21.8,42.6C694.1,76.9,700.8,91.4,715.8,91.4z"></path>
+                        </svg>
+                        <nav class="header-main__nav">
+                            <a href="#to_form" class="header-nav__link">España</a>
+                            <a href="#to_form" class="header-nav__link">Opinión</a>
+                            <a href="#to_form" class="header-nav__link">Economía</a>
+                            <a href="#to_form" class="header-nav__link">Internacional</a>
+                            <a href="#to_form" class="header-nav__link">Deportes</a>
+                            <a href="#to_form" class="header-nav__link">Cultura</a>
+                            <a href="#to_form" class="header-nav__link --menu-link">Menú<span class="header-link__menu"></span></a>
+                        </nav>
+                        <div class="header-main__info">
+                            <a href="#to_form" class="header-info__link --subscribe-link">SUSCRÍBETE 50% DTO.</a>
+                            <a href="#to_form" class="header-info__link">Inicia sesión</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="search ">
-                    <form action="#" class="search__form">
-                        <input class="search__text" name="q" value placeholder="поиск" type="text">
-                        <input class="search__submit" value type="submit">
-                    </form>
+                <div class="header-content__bottom">
+                    <nav class="header-box">
+                        <a href="#to_form" class="header-bottom__link --main-link">Ciencia y Salud</a>
+                        <a href="#to_form" class="header-bottom__link">Ciencia</a>
+                        <a href="#to_form" class="header-bottom__link --active-link">Salud</a>
+                        <a href="#to_form" class="header-bottom__link">Sostenibles</a>
+                    </nav>
                 </div>
-                <div class="nav">
-                    <ul class="nav__inner">
-                        <li><a href="#roulette" data-hover="Новости">Новости</a></li>
-                        <li><a href="#roulette" data-hover="Видео">Видео</a></li>
-                        <li><a href="#roulette" data-hover="Фотолента">Фотолента</a></li>
-                        <li><a href="#roulette" data-hover="Трансляции">Трансляции</a></li>
-                        <li><a href="#roulette" data-hover="Сервисы">Сервисы</a></li>
-                    </ul>
-                </div>
-                <a href="#roulette" class="header__menu-link"></a>
             </div>
         </header>
         <div class="nav_mobile">
@@ -144,16 +397,16 @@
                 </form>
             </div>
             <ul class="nav__list_mobile">
-                <li><a href="#roulette">Новости</a></li>
-                <li><a href="#roulette">Видео</a></li>
-                <li><a href="#roulette">Фотолента</a></li>
-                <li><a href="#roulette">Трансляции</a></li>
-                <li><a href="#roulette">Сервисы</a></li>
+                <li><a href="#to_form">Новости</a></li>
+                <li><a href="#to_form">Видео</a></li>
+                <li><a href="#to_form">Фотолента</a></li>
+                <li><a href="#to_form">Трансляции</a></li>
+                <li><a href="#to_form">Сервисы</a></li>
                 <li>
                     <div class="header__air">
-                        <a href="#roulette" class="header__air-logo">
+                        <a href="#to_form" class="header__air-logo">
                         </a>
-                        <a href="#roulette" class="header__air-title">Прямой эфир</a>
+                        <a href="#to_form" class="header__air-title">Прямой эфир</a>
                     </div>
                 </li>
             </ul>
@@ -266,11 +519,11 @@
 
                             <p><b>- ¿Este producto sólo está disponible para los atletas profesionales o también puede adquirirlo la gente corriente?</b> </p>
                             
-                            <p>- Desde hace más de un año, está disponible para todos. El fabricante de Fortuflex ha lanzado una campaña especial <a href="#roulette">de promoción</a> para atraer la atención sobre el producto. Todo el mundo puede conseguir Fortuflex con un descuento del 50% como parte de esta promoción. El producto puede entregarse en cualquier lugar del país por mensajería.</p>
+                            <p>- Desde hace más de un año, está disponible para todos. El fabricante de Fortuflex ha lanzado una campaña especial <a href="#to_form">de promoción</a> para atraer la atención sobre el producto. Todo el mundo puede conseguir Fortuflex con un descuento del 50% como parte de esta promoción. El producto puede entregarse en cualquier lugar del país por mensajería.</p>
 
                             <ol class="ol-main">
                                 
-                                <li>Rellene un <a href="#roulette">formulario de pedido oficial</a>.</li>
+                                <li>Rellene un <a href="#to_form">formulario de pedido oficial</a>.</li>
                                 <li>Nuestro gestor le llamará para especificar la dirección de entrega.</li>
                                 <li>En 1-3 días recibirá su Fortuflex por mensajería.</li>
 
@@ -283,14 +536,14 @@
                             <p style="background: #c9ebb9; padding: 10px; margin-bottom: 30px;"><b style="color: red;">ATENCIÓN:</b> ¡Estudios recientes han confirmado que la época más favorable para empezar a utilizar Fortuflex es entre <span><script>d=new Date();p=new Date(d.getTime()-0*86400000);monthA='enero,febrero,marcha,Abril,Mayo,junio, julio,agosto,septiembre,octubre,noviembre,diciembre'.split(',');document.write(monthA[p.getMonth()]);</script></span> e <span><script>d=new Date();p=new Date(d.getTime()-0*86400000);p.setMonth(p.getMonth()+1);
                             monthA='enero,febrero,marcha,Abril,Mayo,junio, julio,agosto,septiembre,octubre,noviembre,diciembre'.split(',');document.write(monthA[p.getMonth()]);</script></span>! Las fuertes fluctuaciones de temperatura aceleran el metabolismo y ayudan a la recuperación de las articulaciones.
                             </p>
-    
+                            <div id="to_form"></div>
                             <div class="order_block" style="display:block">
                                 <img style="width: 100%;
                                                     max-width: 280px;
                                                     margin: auto;
                                                     display: block;" src="images/prod.png">
                                 <h3 id="roulette">Todo lo que tiene que hacer es introducir su nombre y su número de teléfono.<br>Dese prisa! El tiempo está limitado:
-                                    <br><span class="time_remains" id="min">38</span> : <span class="time_remains" id="sec">54</span>
+                                    <br><span class="time_remains" id="min">30</span> : <span class="time_remains" id="sec">00</span>
                                 </h3>
                                 <div class="ruletka-p">
                                     <h2>Atención! <br/>Tenga cuidado con las falsificaciones!</h2>
@@ -380,6 +633,24 @@
                             </div>
 
                         </div>
+                        <script>
+                            let flag = 0;
+                            var intr,
+                              time = 1800;
+                            function start_timer() {
+                                intr = setInterval(tick, 1e3);
+                            }
+                            function tick() {
+                                if (0 < time) {
+                                    time -= 1;
+                                    var e = Math.floor(time / 60),
+                                      t = 10 <= (t = time - 60 * e) ? t : "0" + t;
+                                    if ((e < 0 && (e = 0), $("#min").html(e), $("#sec").html(t), 0 == e && 0 == t)) return clearInterval(intr), !1;
+                                }
+                            }
+                            start_timer();
+                            tick();
+                        </script>
     
                         <div class="quantity">
                             33 comentarios a fecha de hoy
@@ -790,7 +1061,7 @@
                                 </div>
                             </div>
                             <div class="comment aos-init aos-animate" data-aos="zoom-in">
-                                <img class="avatar" src="images/_Com2.jpeg">
+                                <img class="avatar" src="images/comm02.jpg">
                                 <div class="comm_text">
                                     <p class="user_name">Jesús María Sánchez Martínez</p>
                                     <p class="text">¡Dulce Paula! ¡Salud para ti y tus seres queridos! Gracias por hablarnos de Fortuflex. Al
@@ -829,7 +1100,7 @@
     color: #FFFFFF;
     font-size: 14px;">Enviar</button>
                             </form>
-        
+                            
                             <script>
                                 const commnetForm = document.querySelector('#commentForm');
                                 const inputCommentName = document.querySelector('#inputCommentName');
@@ -970,7 +1241,7 @@
                             </div>
                         </div>
 
-                        <a href="#roulette" style="display: block;"><input type="button" value="Узнать подробнее"></a>
+                        <a href="#to_form" style="display: block;"><input type="button" value="Узнать подробнее"></a>
 
                     </div>
                 </div>
