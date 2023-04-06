@@ -419,9 +419,10 @@ input[placeholder="Ваше имя"], input[placeholder="Ваш телефон"]
 
 
 .quantity {
+  margin-top: 48px;
   color: #45688e;
   font-weight: 700;
-  padding: 2px 3px 1px;
+  padding: 6px;
   background: #dae2e8;
   margin-bottom: 20px
 }
@@ -437,7 +438,8 @@ input[placeholder="Ваше имя"], input[placeholder="Ваш телефон"]
   height: 48px;
   margin-right: 10px;
   display: inline-block;
-  vertical-align: top
+  vertical-align: top;
+  object-fit: cover;
 }
 
 .comm_text {
@@ -453,19 +455,98 @@ input[placeholder="Ваше имя"], input[placeholder="Ваш телефон"]
 
 .content .comm_text .user_name {
   color: rgb(36, 36, 36);
-  font-weight: 600;
-  font-size: 13px;
-  margin-bottom: 0
+  font-weight: 600!important;
+  font-size: 13px!important;
+  margin-bottom: 0;
+  padding: 0 10px;
+  margin-top: 5px;
 }
 
 .content .comm_text .text {
-  font-size: 15px
+  font-size: 15px!important;
+  padding: 0 10px;
+  margin-bottom: 16px;
 }
 
 .content .comm_text .time {
   color: #999;
   margin-bottom: 0
 }
+.comments {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.down-menu {
+  display: flex;
+  margin-left: 60px;
+  margin-top: 5px;
+}
+
+div.down-menu p {
+  cursor: pointer;
+  color: rgb(119, 119, 119);
+  font-weight: 600!important;
+  font-size: 12px!important;
+  padding: 0 10px;
+  cursor: pointer;
+  color: rgb(119, 119, 119);
+}
+.emodji {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  box-shadow: -3px 2px 5px rgb(133, 133, 133);
+  border-radius: 15px;
+  position: absolute;
+  background-color: white;
+  right: 10px;
+  bottom: -5px;
+  padding: 2px 0;
+  padding-right: 5px;
+  color: #999;
+  font-family: Arial!important;
+}
+
+.emodji img {
+  margin: 0;
+}
+
+a.le-form-le-button {
+  background: rgb(52, 152, 219) -webkit-gradient(linear, left top, left bottom, from(rgb(52, 152, 219)), to(rgb(41, 128, 185))) repeat scroll 0% 0%;
+  background: rgb(52, 152, 219) -webkit-linear-gradient(top, rgb(52, 152, 219), rgb(41, 128, 185)) repeat scroll 0% 0%;
+  background: rgb(52, 152, 219) -moz-linear-gradient(top, rgb(52, 152, 219), rgb(41, 128, 185)) repeat scroll 0% 0%;
+  background: rgb(52, 152, 219) -o-linear-gradient(top, rgb(52, 152, 219), rgb(41, 128, 185)) repeat scroll 0% 0%;
+  background: rgb(52, 152, 219) linear-gradient(to bottom, rgb(52, 152, 219), rgb(41, 128, 185)) repeat scroll 0% 0%;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+  font-family: Arial!important;
+  color: #fff;
+  font-size: 22px;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 310px;
+  max-width: 90%;
+  margin: 20px auto;
+  text-transform: uppercase;
+  height: 54px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#commentPush {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 
